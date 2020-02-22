@@ -1,0 +1,115 @@
+// Common Settings
+
+.TinyNotifications {
+    position: absolute;
+    background-color: red;
+    left: 25px;
+    height: 15px;
+    width: 15px;
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 50%;
+    margin-top: -10px;
+    text-align: center;
+    color: white;
+}
+
+.DockSection {
+    height: 100vh;
+    background-color: var(--darkBlue);
+    width: 300px;
+    --borderColor: rgba(0,0,0,.3);
+    transition: width 200ms;
+    position: sticky;
+    top: 0;
+}
+
+.DockSection.Hidden {
+    width: 50px;
+    overflow-x: hidden;
+    
+    & .LinksSection {
+        align-items: center;
+        text-align: center;
+
+        & .Links {
+
+            & a {
+                padding: 10px 15px;
+
+            }
+        }
+    }
+
+    & i {
+        margin: 0;
+        
+    }
+}
+
+.DockToggler {
+    border-bottom: 1px solid var(--borderColor); 
+    padding: 10px;
+    height: 10%;
+
+    & button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.LinksSection {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 90%;
+    padding-top: 70px;
+}
+
+.Links {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    
+    & a {
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 300ms;
+
+        & > *:not(i) {
+            margin-right: 20px;
+        }
+
+        & > .Extra {
+            color: white;
+            width: 16px;
+            height: 16px;
+            background-color: red;
+            font-size: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 140px;
+            margin-left: 20px;
+        }
+    }
+}
+
+
+.Links a:hover,
+.Links a.ActiveLink {
+    background-color: var(--lightBlue);
+    color: var(--darkBlue);
+}
+
+.Links.Major li {
+    border-bottom: 1px solid var(--borderColor);
+}

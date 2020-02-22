@@ -1,0 +1,244 @@
+// Common Styles
+.GreenText {
+    color: var(--greenText);
+}
+.LightGreyText {
+    color: var(--lightGreyText);
+}
+.Flex {
+    display: flex;
+
+    &.JustifyCenter {
+        justify-content: center;
+    }
+
+    &.AlignCenter {
+        align-items: center;
+    }
+}
+
+main {
+    padding: 0 20px 0 50px;
+}
+
+.TopDetails {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+
+    & > .BackLink {
+
+        margin-right: 20px;
+        padding: 0 20px 0 0;
+        border-right: 1px solid #aaa;
+        color: #333;
+        text-decoration: none;
+
+        & > i {
+            border: none;
+            background: none;
+            background-color: var(--darkBlue);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 0 0;
+            padding: 5px;
+            color: white;
+            font-size: 11px;
+        }
+    }
+
+    & h1 {
+        margin: 0;
+
+        & i {
+            color: var(--darkBlue);
+            margin-right: 20px;
+        }
+    }
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.TopInfo {
+    display: flex;
+    justify-content: space-between;
+
+    & .BreadCrumb {
+        color: var(--darkBlue);
+        font-size: 13px;
+    }
+
+    & .ProdStatus {
+        color: var(--darkBlue);
+
+        & span {
+            font-weight: bold;
+            color: green;
+            font-size: 20px;
+            margin: 0 10px;
+        }
+    }
+}
+
+.OrderDetails {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 0px 10px rgba(0,0,0,.08);
+
+    & > div {
+
+        & h3 {
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+
+
+    & p {
+        font-size: 14px;
+        color: var(--darkBlue);
+        font-weight: bold;
+        margin: 4px 0;
+    }
+
+    & span {
+        margin: 0 10px 0 0;
+    }
+
+    & button {
+        border: none;
+        background: none;
+        font-size: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    & > * {
+        width: 100%;
+        padding: 10px;
+
+        &:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+    }
+
+    & > .OrderValue,
+    & > .OrderDate {
+        width: 60%;
+    }
+
+    & > .Pending,
+    & > .RushOpt {
+        width: 40%;
+    }
+
+    & > .ShippedDate {
+        width: 70%;
+    }
+}
+
+.ProdDetails {
+    box-shadow: 1px 1px 5px rgba(0,0,0,.08);
+
+    & .Menu {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+        
+        & button {
+            border: none;
+            background: none;
+            padding: 20px;
+            font-size: 16px;
+
+            &.Active {
+                color: var(--darkBlue);
+                font-weight: bold;
+                border-bottom: 3px solid var(--darkBlue);
+            }
+        }
+
+        & .Primary {
+            display: flex;
+
+            & > *:first-child {
+                border-right: 1px solid #eee;
+            }
+        }
+
+        & .Secondary {
+            display: flex;
+
+            & button {
+                cursor: pointer;
+                margin: 15px 5px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            & .Worksheet {
+                color: var(--greenText);
+
+                & i {
+                    color: #333;
+                }
+            }
+
+            & .Print {
+                background-color: var(--inactiveColor);
+                color: white;
+                width: 80px;
+                padding: 0 20px;
+            }
+
+            & .AddNote {
+                background: none;
+                color: #333;
+                border: 1px solid #333;
+                padding: 0 20px;
+            }
+
+            & .CompleteProd {
+                background-color: var(--darkBlue);
+                color: white;
+            }
+        }
+    }
+}
+
+.MoreOptions {
+    padding: 10px 20px;
+    background-color: #ddd;
+    margin: 40px 0 0;
+    display: flex;
+    justify-content: space-between;
+
+    & h3 {
+        font-size: 16px;
+    }
+
+    & button {
+        border: 1px solid var(--darkBlue);
+        background: none;
+        color: var(--darkBlue);
+        border-radius: 5px;
+        padding: 0 15px;
+        cursor: pointer;
+    }
+}
+
+.Images {
+    width: 100%;
+    height: 300px;
+}

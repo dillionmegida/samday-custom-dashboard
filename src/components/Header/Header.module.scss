@@ -1,0 +1,92 @@
+.Header, .HeaderMenus, .UserLinks {
+    display: flex;
+}
+
+.Header {
+    width: 100%;
+    box-shadow: 1px 1px 10px var(--lightBlue);
+    padding: 20px 20px;
+    justify-content: space-between;
+}
+
+.Header h1 {
+    margin: 0;
+    width: 120px;
+    height: 100%;
+    overflow-wrap: break-word;
+    line-height: 26px;
+}
+
+.HeaderMenus {
+    --borderColor: #ddd;
+    align-items: center;
+}
+
+.Search,
+.UserLinks div,
+.UserIcon {
+    padding: 0 15px;
+    border-left: 1px solid var(--borderColor);
+}
+.Dropdown a {
+    text-decoration: none;
+    color: inherit;
+}
+.Dropdown ul {
+    display: none;
+}
+.Dropdown a:hover ul {
+    display: block;
+}
+
+.UserIcon {
+
+
+    & button {
+        border: none;
+        width: 50px;
+        height: 50px;
+        background: none;
+        cursor: pointer;
+
+        
+        & img {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 120%;
+            height: 100%;
+            border: 2px solid var(--darkBlue);
+            }
+        }
+
+        & i {
+            color: var(--darkBlue);
+        }
+}
+
+.UserLinks {
+    color: #333;
+
+    & div {
+
+        & i {
+            font-size: 20px;
+            margin: 0 15px;
+
+            & ~ .TinyNotifications {
+                color: white;
+                width: 15px;
+                height: 15px;
+                background-color: var(--darkBlue);
+                font-size: 11px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+                margin-top: -25px;
+                margin-left: 25px;
+            }
+        }
+    }
+}
