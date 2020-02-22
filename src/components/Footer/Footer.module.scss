@@ -1,0 +1,95 @@
+footer {
+    background-color: var(--lightBlue);
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    min-height: 300px;
+
+    & a {
+        display: block;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    & h4 {
+        color: var(--darkBlue);
+        margin: 10px 0;
+    }
+
+    & .Download,
+    & .Connect {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        
+        & div {
+            display: flex;
+        }
+
+    }
+
+    & .Download {
+
+        & a {
+            background-color: #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            /* For apple */
+            &:first-child {
+                color: black;
+            }
+
+            /* For play store */
+            &:last-child {
+                color: lightblue;
+            }
+        }
+    }
+
+    & .Info {
+        width: 45%;
+        font-size: 14px;
+
+        & p {
+            color: #868686;
+        }
+
+        & div {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+
+            & a {
+                color: var(--darkBlue);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    & .Connect {
+
+        & div {
+
+            & a {
+                border: 1px solid #333;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+            }
+        }
+
+    }
+}

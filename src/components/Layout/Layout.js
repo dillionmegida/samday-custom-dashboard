@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import Styles from './Layout.module.css';
 
 import Dock from '../Dock/Dock';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 export default props => {
     return (
@@ -12,6 +13,7 @@ export default props => {
                 <div className={Styles.RightContent}>
                     <Header />
                     {props.children}
+                    <Footer />
                 </div>
             </div>
         </Fragment>

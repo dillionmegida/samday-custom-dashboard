@@ -15,9 +15,13 @@ export default () => {
         <section className={`${Styles.DockSection} ${!isDockOpened ? Styles.Hidden : ''}`}>
             <div className={Styles.DockToggler}>
                 {isDockOpened ? (
-                    <button onClick={() => toggleDock(false)}>X</button>
+                    <button onClick={() => toggleDock(false)}>
+                        <i className='fa fa-times'></i>
+                    </button>
                 ) : (
-                    <button onClick={() => toggleDock(true)}>Y</button>
+                    <button onClick={() => toggleDock(true)}>
+                        <i className='fa fa-bars'></i>
+                    </button>
                 )}
             </div>
             <div className={Styles.LinksSection}>
@@ -26,7 +30,6 @@ export default () => {
                         index !== Links.length - 1 && (
                             <NavLink
                                 key={index}
-                                // icon={<i className={icon}></i>}
                                 icon={<i className={icon}></i>}
                                 // Hide the name when the dock is closed
                                 name={isDockOpened && name}

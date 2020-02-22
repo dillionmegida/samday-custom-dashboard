@@ -81,7 +81,7 @@ export default props => {
                                     <td>{prod.item_id}</td>
                                     <td className={Styles.Details}>
                                         <div className={Styles.Image}>
-
+                                            <img src={prod.details.imgSrc1} alt='Product preview'/>
                                         </div>
                                         <div className={Styles.Info}>
                                             {prod.details.info}
@@ -89,13 +89,18 @@ export default props => {
                                     </td>
                                     <td className={Styles.Colors}>
                                         <div style={{backgroundColor: prod.color}}>
-                                            s
+                                            Royal
                                         </div>
                                     </td>
                                     <td>{prod.qty}</td>
                                     <td>{prod.printType}</td>
-                                    <td>
-                                        {prod.delivery.method}
+                                    <td className={Styles.DeliveryMethod}>
+                                        {prod.delivery.method.toLowerCase() === 'rush shipping' && (
+                                            <span className={Styles.RedText}><i className='fa fa-history'></i> Rush Shipping</span>
+                                        )}
+                                        {prod.delivery.method.toLowerCase() === 'pickup order' && (
+                                            <span className={Styles.BlueText}>Pickup Order</span>
+                                        )}
                                     </td>
                                     <td className={Styles.DeliveryTime}>
                                         {prod.delivery.time.date}<br/><br/>

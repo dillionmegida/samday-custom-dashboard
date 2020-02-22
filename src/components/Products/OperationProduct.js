@@ -34,7 +34,7 @@ export default props => {
                 </div>
                 <section className={Styles.OrderDetails}> 
                     <div className={Styles.OrderValue}>
-                        <h3>Order Value</h3>
+                        <h3><i className='fa fa-shopping-cart'></i> Order Value</h3>
                         <p>{product.order.value}</p>
                     </div>
                     <div className={Styles.OrderDate}>
@@ -53,7 +53,9 @@ export default props => {
                     </div>
                     <div className={Styles.RushOpt}>
                         <h3>Rush Option</h3>
-                        <p>{product.rush ? "Rush" : "No Rush"}</p>
+                        <p>{product.delivery.rush ? (
+                            <><i className='fa fa-check-circle'></i> Rush</>
+                         ) : "No Rush"}</p>
                     </div>
                     <div className={Styles.Pending}>
                         <h3>Status</h3>
@@ -109,8 +111,68 @@ export default props => {
                         </button>
                     </div>
                     <div className={Styles.Images}>
-a
+                        <figure>
+                            <img src={product.details.imgSrc1} alt='Product Preview' />
+                            <figcaption>Front</figcaption>
+                        </figure>
+                        <figure>
+                            <img src={product.details.imgSrc1} alt='Product Preview' />
+                            <figcaption>Back</figcaption>
+                        </figure>
+                        <figure>
+                            <img src={product.details.imgSrc1} alt='Product Preview' />
+                            <figcaption>Side</figcaption>
+                        </figure>
+                        <figure>
+                            <img src={product.details.imgSrc1} alt='Product Preview' />
+                            <figcaption>Side</figcaption>
+                        </figure>
                     </div>
+                    <table cellPadding='5px'>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type='checkbox'/>
+                                </th>
+                                <th>Item #</th>
+                                <th>Details</th>
+                                <th>Production  Type</th>
+                                <th>Colors</th>
+                                <th>Quantity</th>
+                                <th>Paid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type='checkbox'/>
+                                </td>
+                                <td>{[product.item_id]}</td>
+                                <td className={Styles.Details}>
+                                    <div className={Styles.Image}>
+                                        <img src={product.details.imgSrc1} alt='Product Preview' />
+                                    </div>
+                                    <div className={Styles.Info}>
+                                        {product.details.info}
+                                    </div>
+                                </td>
+                                <td className={Styles.PrintType}>{product.printType}</td>
+                                <td className={Styles.Colors}>
+                                    <div style={{backgroundColor: product.color}}>
+                                        Royal
+                                    </div>
+                                </td>
+                                <td>{product.qty}</td>
+                                <td className={Styles.Paid}>
+                                    {product.paid === "full" && (
+                                        <>
+                                            <i className='fa fa-check-circle'></i> Paid in full
+                                        </>
+                                    )}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
             </main>
         </Layout>

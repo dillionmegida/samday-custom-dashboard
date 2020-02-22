@@ -7,12 +7,14 @@ export default [
             date: "25 - June - 2017"
         },
         details: {
-            imgSrc: "",
+            imgSrc1: require("../../assets/img/tshirt.jpg"),
+            imgSrc2: require("../../assets/img/tshirt2.jpg"),
             info: "No MInimum - More Color Available - Gildan unisex ultra cotton T-shirt (NY1)"
         },
         color: "#007BFF",
         qty: "L x 4",
         printType: "DTG Print",
+        paid: 'full',
         delivery: {
             method: "Rush Shipping",
             time: {
@@ -20,7 +22,7 @@ export default [
                 timeLeft: "10:00:00"
             },
             rush: true,
-            status: "pending"
+            status: "Pending"
         },
         prodStatus: `Running 2 of 5`
     },
@@ -31,12 +33,14 @@ export default [
             value: "$40,000"
         },
         details: {
-            imgSrc: "",
+            imgSrc1: require("../../assets/img/tshirt.jpg"),
+            imgSrc2: require("../../assets/img/tshirt2.jpg"),
             info: "No MInimum - More ColorAvailable - Gildan unisex ultra cotton T-shirt (NY1)"
         },
         color: "#007BFF",
         qty: "L x 4",
         printType: "DTG Print",
+        paid: 'full',
         delivery: {
             method: "Pickup Order",
             time: {

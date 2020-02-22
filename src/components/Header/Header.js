@@ -1,15 +1,16 @@
 import React from 'react';
 import Styles from './Header.module.scss';
 
-import NavLink from '../NavLinks/NavLink';
+import {NavLink} from 'react-router-dom';
 import Brand from '../Brand/Details';
-import UserImg from '../../assets/me.jpg';
+import UserImg from '../../assets/img/me.jpg';
 
 export default () => {
     return(
         <header className={Styles.Header}>
-            {/* <img s */}
-            AAA
+            <NavLink to='/'>
+                <img src={Brand.icon} alt='Sameday Custom Logo'/>
+            </NavLink>
             <div className={Styles.HeaderMenus}>
                 <div className={Styles.Search}>
                     <i className='fa fa-search'></i>

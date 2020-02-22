@@ -142,6 +142,12 @@ h2 {
         width: 40%;
     }
 
+    & > .RushOpt {
+        & i {
+            color: var(--greenText);
+        }
+    }
+
     & > .ShippedDate {
         width: 70%;
     }
@@ -241,4 +247,90 @@ h2 {
 .Images {
     width: 100%;
     height: 300px;
+    display: flex;
+
+    & figure {
+        width:150px;
+
+        & img {
+            width: 100%;
+        }
+
+        & figcaption {
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+}
+
+table {
+    width: 100%;
+
+    & thead {
+        background-color: #eee;
+        height: 50px;
+        
+        & th {
+            font-size: 12px;
+            padding: 10px;
+            text-align: left;
+        }
+    }
+
+    & tbody {
+
+        & tr {
+
+            & td {
+                vertical-align: center;
+                font-size: 11px;    
+                padding: 10px;
+
+                &.Details {
+                    width: 20%;
+        
+                    & .Image {
+                        width: 30px;
+                        height: 40px;
+                        display: inline-block;
+        
+                        & img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+        
+                    & .Info {
+                        width: calc(100% - 60px);
+                        float: right;
+                    }
+                }
+
+                &.PrintType {
+                    color: red;
+                }
+
+                &.Colors {
+
+                    & > div {
+                        width: 65px;
+                        margin: 0 5px;
+                        height: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 5px;
+                        color: white;
+                    }
+                }
+
+                &.Paid {
+                    color: var(--greenText);
+                }
+            }
+
+        }
+
+    }
 }

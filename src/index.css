@@ -13,5 +13,9 @@ body {
     --lightBlue: #D7E9FC;
     --inactiveColor: #868686;
     --lightGreyText: #aaa;
-    --greenText: green;
+    --greenText: #1E8406;
+}
+
+body {
+    font-family: "Helvetica";
 }

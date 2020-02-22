@@ -7,6 +7,11 @@
     box-shadow: 1px 1px 10px var(--lightBlue);
     padding: 20px 20px;
     justify-content: space-between;
+
+    & img {
+        width: auto;
+        height: auto;
+    }
 }
 
 .Header h1 {
